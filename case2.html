@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомат пополнения проездных — кейс / Евгений Соклаков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=11">
+</head>
+<body>
+    <main class="page">
+        <div class="container">
+
+            <!-- HERO -->
+            <section class="hero" id="top">
+                <div class="hero__avatar">
+                    <img src="img/case2/0.png" alt="Иконка кейса">
+                </div>
+                <h1 class="hero__title">
+                    Упростил и&nbsp;улучшил UX автомата пополнения<br>
+                    проездных билетов в&nbsp;метро Санкт-Петербурга
+                </h1>
+                <p class="hero__subtitle">Краткая версия кейса</p>
+                <div class="hero__buttons">
+                    <a href="index.html" class="btn">
+                        <span class="btn__label">Вернуться на главную</span>
+                        <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- БАННЕР -->
+            <section class="case-section">
+                <div class="case-banner">
+                    <img src="img/case2/1.png" alt="Автомат пополнения проездных билетов">
+                </div>
+            </section>
+
+            <!-- ВВОДНЫЕ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Вводные</h2>
+                <p class="case-text">
+                    Как житель прекрасного города Санкт-Петербурга и&nbsp;постоянный пользователь метро и&nbsp;не&nbsp;только, почему большие очереди в&nbsp;кассу, а&nbsp;терминалы быстрого пополнения пусто? Любопытство меня вело к&nbsp;ответу и&nbsp;на&nbsp;очереди никак отражалось у&nbsp;людей, почему они не&nbsp;пользуются терминалами. И&nbsp;спрошенные (8&nbsp;человек) и&nbsp;из&nbsp;них, получились 1&nbsp;не&nbsp;удобно пользоваться терминалами, 3&nbsp;с&nbsp;наличкой. И&nbsp;тогда у&nbsp;меня появилась идея сделать данный кейс.
+                </p>
+            </section>
+
+            <!-- ЗАДАЧИ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Задачи</h2>
+                <ul class="case-list">
+                    <li>Снизить количество ошибок при пополнении</li>
+                    <li>Улучшить навигацию и&nbsp;принципы</li>
+                    <li>Сократить и&nbsp;ускорить сценарий пополнения</li>
+                    <li>Повысить читаемость и&nbsp;визуальную понятность интерфейса</li>
+                </ul>
+            </section>
+
+            <!-- ЭТАПЫ РАБОТЫ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Этапы работы</h2>
+                <ol class="case-list case-list--numbered">
+                    <li>Исследуем бизнес и&nbsp;пользователей</li>
+                    <li>Анализируем и&nbsp;формируем гипотезы</li>
+                    <li>Прототипируем и&nbsp;оформляем интерфейс</li>
+                    <li>Тестируем и&nbsp;дорабатываем</li>
+                </ol>
+            </section>
+
+            <!-- ИССЛЕДОВАНИЕ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Исследование</h2>
+                <div class="case-image-wide case-image-wide--medium">
+                    <img src="img/case2/2.png" alt="Автоматы в метро Санкт-Петербурга">
+                </div>
+                <p class="case-text" style="margin-top: 24px;">
+                    Опрос было удобно проводить в&nbsp;метро у&nbsp;касс и&nbsp;терминалов&nbsp;— можно быстро, за&nbsp;1–2&nbsp;минуты, получить ответы на&nbsp;свои вопросы.
+                </p>
+            </section>
+
+            <!-- ТОГГЛЫ ИССЛЕДОВАНИЯ -->
+            <section class="case-section">
+                <details class="case-toggle">
+                    <summary class="case-toggle__summary">Опрос (Цель, Вопросы, результаты)</summary>
+                    <div class="case-toggle__content">
+                        <p class="case-text"><strong>Цель опроса:</strong></p>
+                        <ul class="case-list">
+                            <li>понять, на&nbsp;сколько удобное пользоваться юзерам текущим интерфейсом;</li>
+                        </ul>
+                        <div class="case-quote">Опрошено 30&nbsp;человек</div>
+
+                        <details class="case-toggle">
+                            <summary class="case-toggle__summary">Вопросы</summary>
+                            <div class="case-toggle__content">
+                                <ol class="case-survey">
+                                    <li>
+                                        <strong>Удобно ли&nbsp;вам пополнять подорожник на&nbsp;КСО? (да&nbsp;/&nbsp;нет)</strong>
+                                        <div class="case-quote">Результат: 12&nbsp;— Да, 18&nbsp;— Нет</div>
+                                    </li>
+                                    <li>
+                                        <strong>Знаете ли&nbsp;вы, сколько стоит 1&nbsp;проезд в&nbsp;метро по&nbsp;подорожнику? (да&nbsp;/&nbsp;нет)</strong>
+                                        <div class="case-quote">Результат: 16&nbsp;— Да, 14&nbsp;— Нет</div>
+                                    </li>
+                                    <li>
+                                        <strong>Знаете ли&nbsp;вы, для чего вас просят ввести номер перед подтверждением оплаты? (да&nbsp;/&nbsp;нет)</strong>
+                                        <div class="case-quote">Результат: 8&nbsp;— Да, 22&nbsp;— Нет</div>
+                                    </li>
+                                    <li>
+                                        <strong>Если да, то&nbsp;для чего просят ввести? (открытый)</strong>
+                                        <div class="case-quote">Результат: Все лишь предполагают, никто чётко ответить не&nbsp;может. Кто-то говорит, что привязка идёт карты к&nbsp;номеру, кто-то про чек.</div>
+                                    </li>
+                                    <li>
+                                        <strong>Если не&nbsp;удобно&nbsp;— что для вас кажется не&nbsp;удобным в&nbsp;пополнение подорожника на&nbsp;КСО? (открытый)</strong>
+                                        <div class="case-quote">Результат: Не&nbsp;интуитивный интерфейс, не&nbsp;понимают для чего вводить номер, иногда торопились и&nbsp;вынимали карту раньше времени и&nbsp;оплата слетала.</div>
+                                    </li>
+                                    <li>
+                                        <strong>Считаете ли&nbsp;вы&nbsp;полезной информацию о&nbsp;том, сколько поездок можно пополнить и&nbsp;сколько стоит 1&nbsp;поездка? (да&nbsp;/&nbsp;нет)</strong>
+                                        <div class="case-quote">Результат: 22&nbsp;— Да, 8&nbsp;— Нет</div>
+                                    </li>
+                                    <li>
+                                        <strong>Терминал не&nbsp;выдаёт бумажные чеки, запрашивали ли&nbsp;вы&nbsp;чеки через QR-код или по&nbsp;номеру телефона? (да&nbsp;/&nbsp;нет)</strong>
+                                        <div class="case-quote">Результат: 4&nbsp;— Да, 26&nbsp;— Нет</div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </details>
+
+                <details class="case-toggle">
+                    <summary class="case-toggle__summary">Анализ конкурентов</summary>
+                    <div class="case-toggle__content">
+                        <p class="case-text">
+                            Для анализа я&nbsp;выбрал 2&nbsp;прямых и&nbsp;2&nbsp;непрямых конкурента:
+                        </p>
+
+                        <details class="case-toggle">
+                            <summary class="case-toggle__summary">Прямые</summary>
+                            <div class="case-toggle__content">
+                                <div class="case-grid case-grid--2">
+                                    <figure class="case-figure">
+                                        <figcaption class="case-figure__caption">РЖД терминал покупки билетов</figcaption>
+                                        <div class="case-figure__media">
+                                            <img src="img/case2/4.png" alt="РЖД терминал покупки билетов">
+                                        </div>
+                                    </figure>
+                                    <figure class="case-figure">
+                                        <figcaption class="case-figure__caption">Метро МСК пополнение тройки</figcaption>
+                                        <div class="case-figure__media">
+                                            <img src="img/case2/3.png" alt="Метро МСК пополнение тройки">
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="case-toggle">
+                            <summary class="case-toggle__summary">Непрямые</summary>
+                            <div class="case-toggle__content">
+                                <div class="case-grid case-grid--2">
+                                    <figure class="case-figure">
+                                        <figcaption class="case-figure__caption">Т-Банк банкомат</figcaption>
+                                        <div class="case-figure__media">
+                                            <img src="img/case2/6.png" alt="Т-Банк банкомат">
+                                        </div>
+                                    </figure>
+                                    <figure class="case-figure">
+                                        <figcaption class="case-figure__caption">Магнит КСО</figcaption>
+                                        <div class="case-figure__media">
+                                            <img src="img/case2/5.png" alt="Магнит КСО">
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </details>
+
+                        <div class="case-callout">
+                            <div class="case-callout__icon">💡</div>
+                            <div class="case-callout__body">
+                                <p><strong>Т-Банк и&nbsp;Магнит&nbsp;— фавориты по&nbsp;КСО:</strong> интерфейсы у&nbsp;них обновлялись недавно, поэтому выглядят более продуманными. Пятёрочка построена на&nbsp;базе магнитовской КСО, поэтому отдельно её&nbsp;не&nbsp;учитываю. В&nbsp;целом пользовательский опыт лучше именно в&nbsp;этих решениях.</p>
+                                <p><strong>Метро&nbsp;(Москва)</strong> достаточно дружелюбен к&nbsp;пользователю и&nbsp;даёт хороший отклик, но&nbsp;всё ещё требует оптимизации.</p>
+                                <p><strong>У&nbsp;РЖД</strong> интерфейс перегружен и&nbsp;нуждается в&nbsp;переработке. По&nbsp;результатам небольшого опроса пользователи говорят, что «привыкли», хотя на&nbsp;старте опыт был значительно хуже.</p>
+                                <p>В&nbsp;целом у&nbsp;каждого из&nbsp;конкурентов есть интересные решения, которые можно взять на&nbsp;заметку.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="case-toggle">
+                    <summary class="case-toggle__summary">Job Story</summary>
+                    <div class="case-toggle__content">
+                        <div class="case-callout">
+                            <div class="case-callout__icon">⚠️</div>
+                            <div class="case-callout__body">
+                                <p><strong>Когда</strong> я&nbsp;спешу и&nbsp;вижу очередь в&nbsp;кассу, <strong>я&nbsp;хочу</strong> быстро пополнить карту через терминал без ошибок, <strong>чтобы</strong> не&nbsp;тратить время и&nbsp;не&nbsp;опоздать.</p>
+                            </div>
+                        </div>
+                        <div class="case-callout">
+                            <div class="case-callout__icon">⚠️</div>
+                            <div class="case-callout__body">
+                                <p><strong>Когда</strong> я&nbsp;впервые подхожу к&nbsp;терминалу, <strong>я&nbsp;хочу</strong> сразу понять, куда нажимать и&nbsp;что делать, <strong>чтобы</strong> не&nbsp;чувствовать себя растерянно и&nbsp;не&nbsp;обращаться за&nbsp;помощью.</p>
+                            </div>
+                        </div>
+                        <div class="case-callout">
+                            <div class="case-callout__icon">⚠️</div>
+                            <div class="case-callout__body">
+                                <p><strong>Когда</strong> я&nbsp;пополняю карту, <strong>я&nbsp;хочу</strong> пройти минимальное количество шагов, <strong>чтобы</strong> завершить операцию как можно быстрее.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- ПРОЕКТИРОВАНИЕ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Проектирование</h2>
+                <p class="case-text">
+                    Перед проектированием прошёл тест пользователей на&nbsp;текущих терминалах, чтобы определить удобные области взаимодействия.
+                </p>
+                <p class="case-text" style="margin-top: 12px;">
+                    В&nbsp;тестировании участвовали люди ростом от&nbsp;130 до&nbsp;188&nbsp;см.
+                </p>
+
+                <div class="case-grid case-grid--5" style="margin-top: 24px;">
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">130 см</figcaption>
+                        <div class="case-figure__media">
+                            <img src="img/case2/11.png" alt="Тест с ростом 130 см">
+                        </div>
+                    </figure>
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">148 см</figcaption>
+                        <div class="case-figure__media">
+                            <img src="img/case2/10.png" alt="Тест с ростом 148 см">
+                        </div>
+                    </figure>
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">158 см</figcaption>
+                        <div class="case-figure__media">
+                            <img src="img/case2/9.png" alt="Тест с ростом 158 см">
+                        </div>
+                    </figure>
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">175 см</figcaption>
+                        <div class="case-figure__media">
+                            <img src="img/case2/8.png" alt="Тест с ростом 175 см">
+                        </div>
+                    </figure>
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">188 см</figcaption>
+                        <div class="case-figure__media">
+                            <img src="img/case2/7.png" alt="Тест с ростом 188 см">
+                        </div>
+                    </figure>
+                </div>
+
+                <p class="case-text" style="margin-top: 24px;">
+                    По&nbsp;результатам тестирования сформировал карту зон доступности текущего терминала и&nbsp;использовал её&nbsp;как основу при проектировании нового интерфейса.
+                </p>
+
+                <div class="case-image-wide case-image-wide--medium" style="margin-top: 24px;">
+                    <img src="img/case2/12.png" alt="Карта зон доступности">
+                </div>
+
+                <p class="case-text" style="margin-top: 24px;">
+                    Также зафиксировал расположение элементов управления: считывателя карты, слота для «Подорожника» / социальной карты, чтобы в&nbsp;дальнейшем сделать анимационные подсказки максимально приближенные к&nbsp;реальному устройству.
+                </p>
+
+                <div class="case-grid case-grid--3" style="margin-top: 24px;">
+                    <div class="case-figure__media">
+                        <img src="img/case2/15.png" alt="Считыватель банковской карты">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/14.png" alt="Слот для Подорожника">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/13.png" alt="Считыватель карты">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПРОМЕЖУТОЧНЫЙ РЯД 4 КАРТИНКИ -->
+            <section class="case-section case-section--wide">
+                <div class="case-grid case-grid--4" style="padding: 0 32px;">
+                    <div class="case-figure__media">
+                        <img src="img/case2/16.png" alt="Скрин экрана">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/17.png" alt="Скрин экрана">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/18.png" alt="Скрин экрана">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/19.png" alt="Скрин экрана">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ИТЕРАЦИЯ 1 -->
+            <section class="case-section case-section--wide">
+                <h2 class="case-section__title">Итерация 1</h2>
+                <p class="case-text" style="padding: 0 32px;">
+                    В&nbsp;данной итерации сделал акцент на&nbsp;пополнение поездками, с&nbsp;пополнением произвольной суммой&nbsp;— в&nbsp;отдельную кнопку. Оптимизировал путь от&nbsp;точки входа до&nbsp;пополнения.
+                </p>
+
+                <div class="case-compare case-compare--asymmetric" style="margin-top: 24px;">
+                    <div class="case-compare__col">
+                        <div class="case-compare__label case-compare__label--before">До</div>
+                        <div class="case-compare__media">
+                            <img src="img/case2/20.png" alt="Старый интерфейс автомата">
+                        </div>
+                    </div>
+                    <div class="case-compare__col">
+                        <div class="case-compare__label case-compare__label--after">После</div>
+                        <div class="case-compare__pair">
+                            <div class="case-compare__media">
+                                <img src="img/case2/21.png" alt="Новый интерфейс — пополнение">
+                            </div>
+                            <div class="case-compare__media">
+                                <img src="img/case2/22.png" alt="Новый интерфейс — оплата">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding: 0 32px;">
+                    <p class="case-text" style="margin-top: 16px;">
+                        Во&nbsp;время тестирования выяснилось, что более половины пользователей предпочитают пополнять произвольную сумму. В&nbsp;текущей реализации для этого требовалось сначала нажать «Другое количество», а&nbsp;затем вводить сумму, что добавляло лишний шаг и&nbsp;усложняло сценарий.
+                    </p>
+                    <p class="case-text" style="margin-top: 12px;">
+                        В&nbsp;связи с&nbsp;этим был пересмотрен подход к&nbsp;дальнейшей версии интерфейса: пополнение количеством поездок осталось приоритетным, а&nbsp;ввод произвольной суммы был выведен на&nbsp;первый план.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ИТЕРАЦИЯ 2 -->
+            <section class="case-section case-section--wide">
+                <h2 class="case-section__title">Итерация 2</h2>
+                <p class="case-text" style="padding: 0 32px;">
+                    В&nbsp;данной итерации, опираясь на&nbsp;результаты тестирования первой версии, произвольное пополнение вынесли в&nbsp;основной сценарий&nbsp;— теперь не&nbsp;требуется открывать отдельное модальное окно для ввода суммы. Также упрощена интерактивность сценария.
+                </p>
+
+                <div class="case-grid case-grid--3" style="padding: 0 32px; margin-top: 24px;">
+                    <div class="case-figure__media">
+                        <img src="img/case2/23.png" alt="Главный экран автомата">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/24.png" alt="Ввод количества поездок">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/25.png" alt="Расширенная раскладка">
+                    </div>
+                </div>
+
+                <p class="case-text" style="padding: 0 32px; margin-top: 24px;">
+                    В&nbsp;футер добавлена информация о&nbsp;станции метро, на&nbsp;которой производится пополнение.
+                </p>
+
+                <div class="case-grid case-grid--3" style="padding: 0 32px; margin-top: 24px;">
+                    <div class="case-figure__media">
+                        <img src="img/case2/26.png" alt="QR-код в приложении">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/27.png" alt="Обработка платежа">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/28.png" alt="Успешная оплата">
+                    </div>
+                </div>
+
+                <p class="case-text" style="padding: 0 32px; margin-top: 24px;">
+                    После оплаты пользователь видит обновлённый баланс и&nbsp;количество доступных поездок. При&nbsp;необходимости можно вывести чек на&nbsp;экран.
+                </p>
+
+                <div class="case-grid case-grid--3" style="padding: 0 32px; margin-top: 24px;">
+                    <div class="case-figure__media">
+                        <img src="img/case2/29.png" alt="Список покупок">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/30.png" alt="Обновлённый баланс">
+                    </div>
+                    <div class="case-figure__media">
+                        <img src="img/case2/31.png" alt="Чек об оплате">
+                    </div>
+                </div>
+
+                <p class="case-text" style="padding: 0 32px; margin-top: 24px;">
+                    Добавлено отображение условий: лимиты поездок и&nbsp;доступный транспорт.
+                </p>
+            </section>
+
+            <!-- АНИМАЦИИ -->
+            <section class="case-section case-section--wide">
+                <h2 class="case-section__title">Анимации</h2>
+                <div class="case-grid case-grid--2 case-grid--narrow" style="padding: 0 32px;">
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">Произвольное пополнение</figcaption>
+                        <div class="case-figure__media">
+                            <video src="img/case2/Animation1.mp4" autoplay loop muted playsinline></video>
+                        </div>
+                    </figure>
+                    <figure class="case-figure">
+                        <figcaption class="case-figure__caption">Пополнение поездками</figcaption>
+                        <div class="case-figure__media">
+                            <video src="img/case2/Animation2.mp4" autoplay loop muted playsinline></video>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- РЕЗУЛЬТАТ -->
+            <section class="case-section">
+                <h2 class="case-section__title">Результат</h2>
+                <p class="case-text">
+                    В&nbsp;результате итерации были внесены изменения на&nbsp;основе результатов первого тестирования: упрощён сценарий пополнения и&nbsp;переработана навигация в&nbsp;интерфейсе. Произвольное пополнение вынесено в&nbsp;основной поток, а&nbsp;также сохранено пополнение количеством поездок.
+                </p>
+                <p class="case-text" style="margin-top: 16px;">
+                    Повторное тестирование показало положительные результаты: пользователи без ошибок выполняли пополнение, а&nbsp;интерактивные анимационные подсказки помогли лучше ориентироваться в&nbsp;интерфейсе и&nbsp;быстрее завершать сценарий.
+                </p>
+
+                <h3 style="font-size: 18px; font-weight: 600; margin: 32px 0 16px;">Ожидаемые изменения после редизайна:</h3>
+                <ul class="case-list">
+                    <li>Время пополнения сократится примерно на&nbsp;30%&nbsp;— за&nbsp;счёт упрощения сценария и&nbsp;уменьшения количества шагов</li>
+                    <li>Стартовый сценарий станет понятнее и&nbsp;удобнее в&nbsp;первые секунды использования, потребует меньше ручных действий</li>
+                    <li>Подорожник станет привычнее большему числу пользователей: начатый сценарий доходит до&nbsp;конца и&nbsp;завершается быстрее</li>
+                </ul>
+            </section>
+
+            <!-- СПАСИБО -->
+            <section class="case-thanks">
+                <h2 class="case-thanks__title">СПАСИБО ЗА&nbsp;ВНИМАНИЕ!</h2>
+                <p class="case-thanks__contacts">
+                    <a href="https://t.me/Soklakov" target="_blank" rel="noopener" class="text-link">Telegram</a>
+                    <span class="case-thanks__sep">•</span>
+                    <span>Почта:</span>
+                    <a href="mailto:soklakov.evgeniy@mail.ru" class="text-link">soklakov.evgeniy@mail.ru</a>
+                    <span class="case-thanks__sep">•</span>
+                    <span>Тел:</span>
+                    <a href="tel:+79119822228" class="text-link">+7&nbsp;(911)&nbsp;982-22-28</a>
+                </p>
+                <div class="case-thanks__cta">
+                    <a href="#top" class="btn">
+                        <span class="btn__label">В начало</span>
+                        <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M7 10.5V3.5M7 3.5L3.5 7M7 3.5L10.5 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="index.html" class="btn">
+                        <span class="btn__label">Вернуться на главную</span>
+                        <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer__left">Сделано при помощи ИИ</div>
+                <div class="footer__right">
+                    <a href="https://drive.google.com/file/d/1NSleYqPIB4gHWDvywmFM7YKChPPIrIDy/view?usp=sharing" target="_blank" rel="noopener" class="text-link">
+                        <span>Резюме</span>
+                        <svg class="text-link__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/Soklakov" target="_blank" rel="noopener" class="text-link">
+                        <span>Telegram</span>
+                        <svg class="text-link__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M3.5 10.5L10.5 3.5M10.5 3.5H4.5M10.5 3.5V9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <span class="footer__year">2026</span>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+</body>
+</html>
